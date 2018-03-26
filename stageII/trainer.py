@@ -12,8 +12,8 @@ from progressbar import ETA, Bar, Percentage, ProgressBar
 from PIL import Image, ImageDraw, ImageFont
 
 
-from misc.config import cfg
-from misc.utils import mkdir_p
+from Project.misc.config import cfg
+from Project.misc.utils import mkdir_p
 
 TINY = 1e-8
 

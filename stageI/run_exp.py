@@ -7,11 +7,11 @@ import datetime
 import argparse
 import pprint
 
-from misc.datasets import TextDataset
-from stageI.model import CondGAN
-from stageI.trainer import CondGANTrainer
-from misc.utils import mkdir_p
-from misc.config import cfg, cfg_from_file
+from Project.misc.datasets import TextDataset
+from Project.stageI.model import CondGAN
+from Project.stageI.trainer import CondGANTrainer
+from Project.misc.utils import mkdir_p
+from Project.misc.config import cfg, cfg_from_file
 
 
 def parse_args():

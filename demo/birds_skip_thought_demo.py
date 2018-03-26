@@ -9,10 +9,10 @@ import os
 import argparse
 from PIL import Image, ImageDraw, ImageFont
 
-from misc.config import cfg, cfg_from_file
-from misc.utils import mkdir_p
-from misc import skipthoughts
-from stageII.model import CondGAN
+from Project.misc.config import cfg, cfg_from_file
+from Project.misc.utils import mkdir_p
+from Project.misc import skipthoughts
+from Project.stageII.model import CondGAN
 
 
 def parse_args():

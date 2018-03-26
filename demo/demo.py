@@ -11,9 +11,9 @@ import torchfile
 from PIL import Image, ImageDraw, ImageFont
 import re
 
-from misc.config import cfg, cfg_from_file
-from misc.utils import mkdir_p
-from stageII.model import CondGAN
+from Project.misc.config import cfg, cfg_from_file
+from Project.misc.utils import mkdir_p
+from Project.stageII.model import CondGAN
 
 
 def parse_args():
