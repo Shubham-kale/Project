@@ -61,7 +61,7 @@ def build_model(sess, embedding_dim, batch_size):
         with tf.variable_scope("g_net"):
             c = sample_encoded_context(embeddings, model)
             z = tf.random_normal([batch_size, cfg.Z_DIM])
-            fake_images = model.get_generator(tf.concat(1, [c, z]))
+            fake_images = model.get_generator(tf.concat(axis=1, values=[c, z]))
         with tf.variable_scope("hr_g_net"):
             hr_c = sample_encoded_context(embeddings, model)
             hr_fake_images = model.hr_get_generator(fake_images, hr_c)
@@ -69,7 +69,7 @@ def build_model(sess, embedding_dim, batch_size):
     ckt_path = cfg.TEST.PRETRAINED_MODEL
     if ckt_path.find('.ckpt') != -1:
         print("Reading model parameters from %s" % ckt_path)
-        saver = tf.train.Saver(tf.all_variables())
+        saver = tf.train.Saver(tf.global_variables())
         saver.restore(sess, ckt_path)
     else:
         print("Input a valid model path.")

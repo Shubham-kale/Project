@@ -222,7 +222,7 @@ class TextDataset(object):
     def get_data(self, pickle_path, aug_flag=True):
         with open(pickle_path + self.image_filename, 'rb') as f:
             print(str(pickle_path + self.image_filename))
-            images = pickle.load(f)
+            images = pickle.load(f,encoding='latin1')
             images = np.array(images)
             print('images: ', images.shape)
 

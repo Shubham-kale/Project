@@ -1,17 +1,57 @@
+================================================================================
+Input tree: 'demo/'
+================================================================================
 --------------------------------------------------------------------------------
-Processing file 'stageI/model.py'
- outputting to 'stageI/model_new.py'
+Processing file 'demo/birds_skip_thought_demo.py'
+ outputting to 'demo_new/birds_skip_thought_demo.py'
 --------------------------------------------------------------------------------
 
-'stageI/model.py' Line 223
+'demo/birds_skip_thought_demo.py' Line 63
 --------------------------------------------------------------------------------
 
 Added keyword 'concat_dim' to reordered function 'tf.concat'
 Added keyword 'values' to reordered function 'tf.concat'
 
-    Old:         x_c_code = tf.concat(3, [x_code, c_code])
-                                                           
-    New:         x_c_code = tf.concat(axis=3, values=[x_code, c_code])
-                                      ~~~~~   ~~~~~~~                  
+    Old:             fake_images = model.get_generator(tf.concat(1, [c, z]))
+                                                                             
+    New:             fake_images = model.get_generator(tf.concat(axis=1, values=[c, z]))
+                                                                 ~~~~~   ~~~~~~~         
+
+'demo/birds_skip_thought_demo.py' Line 71
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.all_variables' to 'tf.global_variables'
+
+    Old:         saver = tf.train.Saver(tf.all_variables())
+                                        ~~~~~~~~~~~~~~~~    
+    New:         saver = tf.train.Saver(tf.global_variables())
+                                        ~~~~~~~~~~~~~~~~~~~    
+
+
+--------------------------------------------------------------------------------
+Processing file 'demo/demo.py'
+ outputting to 'demo_new/demo.py'
+--------------------------------------------------------------------------------
+
+'demo/demo.py' Line 64
+--------------------------------------------------------------------------------
+
+Added keyword 'concat_dim' to reordered function 'tf.concat'
+Added keyword 'values' to reordered function 'tf.concat'
+
+    Old:             fake_images = model.get_generator(tf.concat(1, [c, z]))
+                                                                             
+    New:             fake_images = model.get_generator(tf.concat(axis=1, values=[c, z]))
+                                                                 ~~~~~   ~~~~~~~         
+
+'demo/demo.py' Line 72
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.all_variables' to 'tf.global_variables'
+
+    Old:         saver = tf.train.Saver(tf.all_variables())
+                                        ~~~~~~~~~~~~~~~~    
+    New:         saver = tf.train.Saver(tf.global_variables())
+                                        ~~~~~~~~~~~~~~~~~~~    
 
 
