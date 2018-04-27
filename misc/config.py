@@ -10,7 +10,7 @@ __C = edict()
 cfg = __C
 
 # Dataset name: flowers, birds
-__C.DATASET_NAME = 'flowers'
+__C.DATASET_NAME = 'birds'
 __C.EMBEDDING_TYPE = 'cnn-rnn'
 __C.CONFIG_NAME = ''
 __C.GPU_ID = 0
@@ -23,7 +23,7 @@ __C.TEST.HR_IMSIZE = 256
 __C.TEST.NUM_COPY = 16
 __C.TEST.BATCH_SIZE = 64
 __C.TEST.NUM_COPY = 16
-__C.TEST.PRETRAINED_MODEL = ''
+__C.TEST.PRETRAINED_MODEL = '/home/oslab/Data/models/birds_skip_thought_model_164000.ckpt'
 __C.TEST.CAPTION_PATH = ''
 
 
@@ -33,8 +33,8 @@ __C.TRAIN.FLAG = True
 __C.TRAIN.BATCH_SIZE = 64
 __C.TRAIN.NUM_COPY = 4
 __C.TRAIN.MAX_EPOCH = 600
-__C.TRAIN.SNAPSHOT_INTERVAL = 2000
-__C.TRAIN.PRETRAINED_MODEL = ''
+__C.TRAIN.SNAPSHOT_INTERVAL = 500
+__C.TRAIN.PRETRAINED_MODEL = '/home/oslab/ckt_logs/birds/_2018_04_19_11_03_38/model_4000.ckpt'
 __C.TRAIN.PRETRAINED_EPOCH = 600
 
 __C.TRAIN.DISCRIMINATOR_LR = 2e-4

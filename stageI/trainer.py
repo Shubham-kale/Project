@@ -302,7 +302,7 @@ class CondGANTrainer(object):
     def train(self):
         config = tf.ConfigProto(allow_soft_placement=True)
         with tf.Session(config=config) as sess:
-            with tf.device("/gpu:%d" % cfg.GPU_ID):
+            with tf.device("/cpu:%d" % cfg.GPU_ID):
                 counter = self.build_model(sess)
                 saver = tf.train.Saver(tf.global_variables(),
                                        keep_checkpoint_every_n_hours=2)
@@ -438,7 +438,7 @@ class CondGANTrainer(object):
     def evaluate(self):
         config = tf.ConfigProto(allow_soft_placement=True)
         with tf.Session(config=config) as sess:
-            with tf.device("/gpu:%d" % cfg.GPU_ID):
+            with tf.device("/cpu:%d" % cfg.GPU_ID):
                 if self.model_path.find('.ckpt') != -1:
                     self.init_opt()
                     print("Reading model parameters from %s" % self.model_path)

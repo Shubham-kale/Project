@@ -5,8 +5,8 @@ GPU_ID: 0
 Z_DIM: 100
 
 TEST:
-    CAPTION_PATH: './Data/birds/example_captions.txt'
-    PRETRAINED_MODEL: './models/birds_skip_thought_model_164000.ckpt'
+    CAPTION_PATH: '/home/oslab/Data/birds/example_captions.txt'
+    PRETRAINED_MODEL: '/home/oslab/Data/models/birds_skip_thought_model_164000.ckpt'
     BATCH_SIZE: 64
     NUM_COPY: 8
 
